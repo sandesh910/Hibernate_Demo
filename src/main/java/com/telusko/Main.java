@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args) {
 
 //        To Fetch Data from database
-//        Alien a =new Alien();
-//        a.setAid(103);
-//        a.setAname("Brijesh");
-//        a.setTech("Python");
+        Alien a =new Alien();
+        a.setAid(101);
+        a.setAname("Brijesh");
+        a.setTech("Java");
 
 
 //        // Creates Hibernate configuration object.
@@ -28,24 +28,26 @@ public class Main {
 //        // Creates SessionFactory (Heavy object, created only once per application).
 //        SessionFactory factory = config.buildSessionFactory();
 
-//        // OR to reduce the code can directely right
-//        SessionFactory factory = new Configuration().addAnnotatedClass(com.telusko.Alien.class).configure().buildSessionFactory();
-//
-//        // Opens a Session (Lightweight object used to communicate with the database).
-//        Session session = factory.openSession();
-//
-//        // Begins a database transaction.
-//        Transaction transaction = session.beginTransaction();
-//
-//        // Makes the object persistent (INSERT into database on commit).
-//        session.persist(a);
-//
-//        // Commits the transaction and permanently saves data.
-//        transaction.commit();
-//
-//        // Good practice (optional in simple examples).
-//        session.close();
-//        factory.close();
+        // OR to reduce the code can directely right
+        SessionFactory factory = new Configuration().addAnnotatedClass(com.telusko.Alien.class).configure().buildSessionFactory();
+
+        // Opens a Session (Lightweight object used to communicate with the database).
+        Session session = factory.openSession();
+
+        // Begins a database transaction.
+        Transaction transaction = session.beginTransaction();
+
+        // Makes the object persistent (INSERT into database on commit).
+        session.persist(a);
+
+        // Commits the transaction and permanently saves data.
+        transaction.commit();
+
+        // Good practice (optional in simple examples).
+        session.close();
+        factory.close();
+
+//-----------------------------------------------------------------------------------------------------------------------------//
 
 //        // To fetch data from database
 //        SessionFactory factory = new Configuration()
@@ -68,24 +70,50 @@ public class Main {
 //        session.close();
 //        factory.close();
 
-//To update the existing data from database.
+// -----------------------------------------------------------------------------------------------------------------------------------------//
 
-        Alien a =new Alien();
-        a.setAid(10);
-        a.setAname("Mahesh");
-        a.setTech("Django");
-        SessionFactory factory = new Configuration()
-                .addAnnotatedClass(com.telusko.Alien.class)
-                .configure()
-                .buildSessionFactory();
+////To update the existing data from database.
+//
+//        Alien a =new Alien();
+//        a.setAid(104);
+//        a.setAname("Mandar");
+//        a.setTech("SQL");
+//        SessionFactory factory = new Configuration()
+//                .addAnnotatedClass(com.telusko.Alien.class)
+//                .configure()
+//                .buildSessionFactory();
+//
+//        Session session = factory.openSession();
+//
+//        Transaction transaction = session.beginTransaction();
+//
+//        //merge will update the data if id present or create/insert new one in the table
+//        session.merge(a);
+//
+//        transaction.commit();
+//        session.close();
+//        factory.close();
 
-        Session session = factory.openSession();
+// -----------------------------------------------------------------------------------------------------------------------------------------//
 
-        Transaction transaction = session.beginTransaction();
-
-        session.merge(a);
-
-        session.close();
-        factory.close();
+//// To delete the existing data from database.
+//
+//        SessionFactory factory = new Configuration()
+//                .addAnnotatedClass(com.telusko.Alien.class)
+//                .configure()
+//                .buildSessionFactory();
+//
+//        Session session = factory.openSession();
+//
+//        Transaction transaction = session.beginTransaction();
+//
+//        Alien a=session.find(Alien.class,104);
+//
+//        //remove will delete the data from the table
+//        session.remove(a);
+//
+//        transaction.commit();
+//        session.close();
+//        factory.close();
     }
 }

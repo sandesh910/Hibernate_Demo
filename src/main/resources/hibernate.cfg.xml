@@ -23,6 +23,8 @@
         <!--update  : Creates table if it doesn't exist and updates the schema without deleting existing data.-->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
+<!--     mostly update is used all Crud operations are done using it-->
+
         <!--validate: Only checks whether the table structure matches the Entity.-->
 
 
