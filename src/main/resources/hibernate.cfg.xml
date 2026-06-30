@@ -1,11 +1,33 @@
 <hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+
     <session-factory>
+
+        <!-- JDBC Driver used to connect Hibernate with PostgresSQL -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+
+        <!-- Database URL -->
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/telusko</property>
+
+        <!-- Database username -->
         <property name="hibernate.connection.username">postgres</property>
+
+        <!-- Database password -->
         <property name="hibernate.connection.password">mutadak@1</property>
 
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!-- create  : Drops old table and creates a new one every time the application runs. -->
+<!--        <property name="hibernate.hbm2ddl.auto">create</property>-->
+
+        <!--update  : Creates table if it doesn't exist and updates the schema without deleting existing data.-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--validate: Only checks whether the table structure matches the Entity.-->
+
+
+        <!--create-drop : Creates table on startup and drops it when the application stops.-->
+
+
+
 
     </session-factory>
+
 </hibernate-configuration>
