@@ -14,8 +14,11 @@
         <!-- Database password -->
         <property name="hibernate.connection.password">mutadak@1</property>
 
+        <!-- To see what queris hibernate using -->
+        <property name="hibernate.show_sql">true</property>
+
         <!-- create  : Drops old table and creates a new one every time the application runs. -->
-<!--        <property name="hibernate.hbm2ddl.auto">create</property>-->
+        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
 
         <!--update  : Creates table if it doesn't exist and updates the schema without deleting existing data.-->
         <property name="hibernate.hbm2ddl.auto">update</property>
