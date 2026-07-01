@@ -26,7 +26,7 @@
 <!--     mostly update is used all Crud operations are done using it-->
 
         <!--validate: Only checks whether the table structure matches the Entity.-->
-
+        <!--<property name="hibernate.hbm2ddl.auto">validate</property>-->
 
         <!--create-drop : Creates table on startup and drops it when the application stops.-->
 
