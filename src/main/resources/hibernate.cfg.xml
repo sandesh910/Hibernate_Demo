@@ -29,7 +29,7 @@
         <!--<property name="hibernate.hbm2ddl.auto">validate</property>-->
 
         <!--create-drop : Creates table on startup and drops it when the application stops.-->
-
+        <!--<property name="hibernate.hbm2ddl.auto">create-drop</property>-->
 
 
 
